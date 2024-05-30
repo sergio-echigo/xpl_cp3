@@ -50,4 +50,5 @@ O template **Tornado** utiliza o Python como linguagem de programação, como in
 ![Linguagem de programação utilizada pelo Tornado](/imgs/10.png)
 
 ### Finalização do laboratório
+![Finalização do lab](/imgs/11.png)
 
