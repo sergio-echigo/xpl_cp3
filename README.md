@@ -37,7 +37,7 @@ A linguagem utilizada pelo ERB é o **Ruby**, linguagem dinâmica e de script or
 ![Linguagem utilizada pelo ERB](/imgs/7.png)
 
 ## Lab 02
-A vulnerabilidade está presente no parâmetro `blog-post-author-display` do corpo da requisição de um POST, enviado durante a escolha da preferência de apresentação do usuário logado. O que acontece é que, ao se fazer um comentário, o nome de usuário (primeiro nome ou ainda, nome completo, sempre de acordo com a preferência do usuário) é renderizado. Como durante a escolha é enviado o seguinte padrão: user.(nickname|fullname|first_name)
+A vulnerabilidade está presente no parâmetro `blog-post-author-display` do corpo da requisição de um POST, enviado durante a escolha da preferência de apresentação do usuário logado. O que acontece é que, ao se fazer um comentário, o nome de usuário (primeiro nome ou ainda, nome completo, sempre de acordo com a preferência do usuário) é renderizado. Como durante a escolha é enviado o seguinte padrão: `user.(nickname|fullname|name)`, pôde-se teorizar de que o mesmo padrão seria usado na hora de se obter a apresentação escolhida pelo usuário. Portanto, pode-se injetar algo como `user.name}}{{ print("PoC."}` para obter a renderização de comandos injetados pelo usuário.
 
 ### Captura de tela contendo nome e RM
 ![Imagem demonstrando nome e RM](/imgs/8.png)
