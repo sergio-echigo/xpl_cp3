@@ -34,5 +34,20 @@ O *payload* utilizado foi o ``<%=`rm morale.txt`%>``. A tag utilizada renderiza 
 
 ### Linguagem utilizada
 A linguagem utilizada pelo ERB é o **Ruby**, linguagem dinâmica e de script orientada à objetos.
-
 ![Linguagem utilizada pelo ERB](/imgs/7.png)
+
+## Lab 02
+A vulnerabilidade está presente no parâmetro `blog-post-author-display` do corpo da requisição de um POST, enviado durante a escolha da preferência de apresentação do usuário logado. O que acontece é que, ao se fazer um comentário, o nome de usuário (primeiro nome ou ainda, nome completo, sempre de acordo com a preferência do usuário) é renderizado. Como durante a escolha é enviado o seguinte padrão: user.(nickname|fullname|first_name)
+
+### Captura de tela contendo nome e RM
+![Imagem demonstrando nome e RM](/imgs/8.png)
+
+### PoC da vulnerabilidade
+![PoC da vulnerabilidade](/imgs/9.png)
+
+### Linguagem usada pelo template
+O template **Tornado** utiliza o Python como linguagem de programação, como indicado pela própria documentação.
+![Linguagem de programação utilizada pelo Tornado](/imgs/10.png)
+
+### Finalização do laboratório
+
